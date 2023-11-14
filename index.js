@@ -1,0 +1,83 @@
+const myCheckbox = document.querySelector(".switch input");
+const  duration = document.querySelector(".month");
+const  price = document.querySelector(".price .pricefix");
+const  switcher = document.querySelector(".switch");
+const  range = document.querySelector(".myrange");
+const pageViews = document.querySelector(".page-views span");    
+
+switcher.addEventListener('click',function(){
+    if(myCheckbox.checked==true){
+        let priceInt =price.textContent;
+        price.textContent=(priceInt*12)-(0.25*priceInt*12);
+        duration.textContent='/year';
+    }
+    else{
+        refreshPrices();
+        duration.textContent='/month';
+    }
+})
+
+range.addEventListener('input',refreshPrices);
+
+function refreshPrices(){
+
+    if(range.value==1){
+
+        if(myCheckbox.checked==true){
+            price.textContent=72;
+        }
+        else{
+            price.textContent=8;
+        }
+
+        pageViews.textContent='10k';
+    }
+
+    if(range.value==2){
+
+        if(myCheckbox.checked==true){
+            price.textContent=108;
+        }
+        else{
+            price.textContent=12;
+        }
+
+        pageViews.textContent='50k';
+    }
+
+    if(range.value==3){
+
+        if(myCheckbox.checked==true){
+            price.textContent=144;
+        }
+        else{
+            price.textContent=16;
+        }
+
+        pageViews.textContent='50k';
+    }
+
+    if(range.value==4){
+
+        if(myCheckbox.checked==true){
+            price.textContent=216;
+        }
+        else{
+            price.textContent=24;
+        }
+
+        pageViews.textContent='50k';
+    }
+
+    if(range.value==5){
+
+        if(myCheckbox.checked==true){
+            price.textContent=324;
+        }
+        else{
+            price.textContent=36;
+        }
+
+        pageViews.textContent='50k';
+    }
+}
