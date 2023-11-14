@@ -54,7 +54,7 @@ function refreshPrices(){
             price.textContent=16;
         }
 
-        pageViews.textContent='50k';
+        pageViews.textContent='100k';
     }
 
     if(range.value==4){
@@ -66,7 +66,7 @@ function refreshPrices(){
             price.textContent=24;
         }
 
-        pageViews.textContent='50k';
+        pageViews.textContent='500k';
     }
 
     if(range.value==5){
@@ -78,6 +78,6 @@ function refreshPrices(){
             price.textContent=36;
         }
 
-        pageViews.textContent='50k';
+        pageViews.textContent='1M';
     }
 }
